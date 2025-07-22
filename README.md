@@ -39,13 +39,11 @@ Stop Subscript : "K"
 >>> stop <<<
 USER>
 ```
-or using **iTerm**
-```
+or using **iTerm**   
 [http://localhost:42773/iterm/](http://localhost:42773/iterm/)
-```
+
 To access IRIS System Management Portal:
-```
 [http://localhost:42773/csp/sys/UtilHome.csp](http://localhost:42773/csp/sys/UtilHome.csp)
-```
+
 
 [Article on DC](https://community.intersystems.com/)    
