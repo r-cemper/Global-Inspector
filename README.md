@@ -12,10 +12,10 @@ git https://github.com/r-cemper/Global-Inspector.git
 Run the IRIS container with your project: 
 ```
 docker compose up -d && docker compose logs -f
-```
-## How to Test it
-
-[http://localhost:42773/csp/user/webcmd.csp ](http://127.0.0.1:42773/csp/user/ginspect.CSP) 
+```  
+## How to Test it   
+[http://localhost:42773/csp/user/webcmd.csp ](http://127.0.0.1:42773/csp/user/ginspect.CSP)  
+<img width="468" height="450" alt="image" src="https://github.com/user-attachments/assets/657b2e7e-c621-41a6-89bb-10be664ab22f" />  
 
 ### from Terminal Prompt 
 To open IRIS Terminal do:
@@ -42,7 +42,7 @@ USER>
 or using **iTerm**   
 [http://localhost:42773/iterm/](http://localhost:42773/iterm/)
 
-To access IRIS System Management Portal:
+To access IRIS System Management Portal:    
 [http://localhost:42773/csp/sys/UtilHome.csp](http://localhost:42773/csp/sys/UtilHome.csp)
 
 
