@@ -1,0 +1,46 @@
+ROUTINE rcc.ginspect
+g ;global inspector
+ read "Global Name : ",gn,!
+ read "Maximum Subscripts : ",max,!  
+ read "Show content ? (0,1) [1] : ",sh,!
+ read "Start Subscript :",start,!
+ read "Stop Subscript : ",stop,!
+	
+go
+ set gl=$s($e(gn)="^":"",1:"^")_gn
+ if '$data(@gl) write !,"Global "_gl_ " does not exist",! quit
+ set max=+max
+ set max=+max
+ set sh=$extract(+sh_1)
+ set (nx,gx)=gl	
+ if $length(start) {
+  ;	if +start'=start set start =$char(34)_start_$char(34)
+  	set nx=nx_"("_start_")"
+ 	}
+ if $length(stop) {
+  ;	if +stop'=stop set stop =$char(34)_stop_$char(34)
+ 	set gx=gl_"("_stop_")" 
+ 	}
+ try {	
+  		if $data(@nx,val) > 10 do sh
+ 	} catch {
+	 	write !,"Invalid subscripts "_nx,! return
+	 	}
+ 
+loop for  {
+ set nx=$select(sh:$query(@nx,1,val),1:$query(@nx,1))
+ if (nx="")!($length(stop)&&($zreference]gx)) write !,">>> stop <<<" return
+ if $qlength(nx)'>max do sh 
+ }
+ quit
+
+sh
+	write !,$zreference,$char(9)
+	quit:'sh 	
+	write ##class(%Utility).FormatString(val) 
+	quit 
+gl
+	set gl=$s($e(gn)="^":"",1:"^")_gn
+	set gd=$data(@gl) 
+ 	if 'gd write !,"Global "_gl_ " does not exist",!
+ 	quit 

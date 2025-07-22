@@ -1,0 +1,74 @@
+<html>
+<head>
+
+<script language="JavaScript" type="text/javascript">
+
+function run()
+{
+var gn = self.document.form.gn.value; 
+var max = self.document.form.max.value; 
+var sh = self.document.form.sh.value; 
+var start = self.document.form.start.value; 
+var stop = self.document.form.stop.value;
+    #server(..run(gn,max,sh,start,stop))# ;
+return true;
+}
+
+</script>
+
+</head>
+
+<body bgcolor="#c8ffc8">
+<title>Inspect Global Details</title>
+<h2>Inspect Global Details</h2>
+<font face="Verdana,Arial,Helvetica,sans-serif">
+Specify what Global and which part of it you want so see 
+</font>
+<form name="form">
+<table cellspacing="5">
+<tr>
+<td align="right">Global Name :</b></td>
+<td><input name="gn"></td></tr>
+<tr>
+<td align="right">Maximum Subscripts :</b></td>
+<td><input name="max"></td></tr>
+<tr>
+<td align="right">Show content ? (0,1) [1] :</b></td>
+<td><input name="sh"></td></tr>
+<tr>
+<td align="right">quitalid Start Subscript </b></td>
+<td><input name="start"></td></tr>
+<tr>
+<td align="right">Valid Stop Subscript :</b></td>
+<td><input name="stop"></td></tr>
+<tr>
+<td><input type="Button" value="show" onclick="run();"></td>
+</tr>
+<td align="right"><b>Result:</b></td>
+<td>
+<textarea name="res" rows="5" cols="80" style="width: 611px; height: 238px;"></textarea>
+</td></tr>
+</table>
+</form>
+<hr>
+<script language="Cache" method="run" 
+	arguments="gn:%String,max:%Integer,sh:%Integer,start:%String,stop:%String">
+  // server-side method to process ObjectScript
+  kill ^SPOOL($j)
+  set %rccio=$io
+  open 2:$job use 2
+  do go^rcc.ginspect
+  close 2 use %rccio
+  set res=""
+  for i=1:1 {
+    quit:'$d(^SPOOL($j,i),lin)  
+    set res=res_lin
+  }
+  set res=$replace(res,"\","\\") 
+  set res=$tr(res,$c(13,10,9),"\n=")
+	
+  &javascript< CSPPage.document.form.res.value = '#(res)#'; >
+  quit
+</script>
+</body>
+</html>

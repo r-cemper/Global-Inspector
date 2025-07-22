@@ -4,10 +4,18 @@
     <Module>
       <Name>global-inspector</Name>
       <Version>0.0.1</Version>
-      <Description>dig into Globals</Description>
+      <Description>Slim Command from Web</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
 	  <Resource Name="rcc.PKG"/>
-     </Module>
+      <FileCopy Name="csp/" Target="${cspdir}rcc.ginspect"/>
+      <Invokes>
+	<Invoke Class="%SYSTEM.OBJ" Method="ImportDir">
+          <Arg>${cspdir}cc.ginspect</Arg>
+          <Arg>*.csp</Arg>
+          <Arg>c</Arg>
+       </Invoke>
+     </Invokes>
+    </Module>
   </Document>
 </Export>
