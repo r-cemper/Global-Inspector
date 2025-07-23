@@ -36,7 +36,7 @@ Specify what Global and which part of it you want so see
 <td align="right">Show content ? (0,1) [1] :</b></td>
 <td><input name="sh"></td></tr>
 <tr>
-<td align="right">quitalid Start Subscript </b></td>
+<td align="right">Qualified Start Subscript </b></td>
 <td><input name="start"></td></tr>
 <tr>
 <td align="right">Valid Stop Subscript :</b></td>
