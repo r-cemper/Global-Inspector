@@ -64,5 +64,4 @@ or using **iTerm**
 To access IRIS System Management Portal:    
 [http://localhost:42773/csp/sys/UtilHome.csp](http://localhost:42773/csp/sys/UtilHome.csp)
 
-
-[Article on DC](https://community.intersystems.com/)    
+[Article on DC](https://community.intersystems.com/post/global-inspector)     
