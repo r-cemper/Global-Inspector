@@ -8,7 +8,8 @@ the subscript structures.
 Globals storing SQL Tables are probably not so thrilling, but in SYSTEM   
 space you find real trees with completely different branches and twigs.  
 
-Global-Inspector can run in browser or from terminal command line.  
+Global-Inspector can run in browser or from terminal command line.
+
 **required input**   
 - Global name: with or without leading caret   
 - Maximal number of subscripts you want to see  
