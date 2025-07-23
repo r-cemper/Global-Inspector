@@ -1,4 +1,5 @@
-## Global-Inspector
+# Global-Inspector
+If you are working with complex structured globals typically from the
     
 
 ## Prerequisites
