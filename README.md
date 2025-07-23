@@ -1,7 +1,22 @@
 # Global-Inspector
-If you are working with complex structured globals typically from the
-    
+If you are investigating complex structured Globals this can become  
+a rather boring typing exercise. Different from Global Explorer in   
+System Management Portal Global-Inspector allows a kind of drill-down   
+to dig deeper and deeper by subscript levels.  
+You also have the option to see the stored content or to show only   
+the subscript structures.
+Globals storing SQL Tables are probably not so thrilling, but in SYSTEM   
+space you find real trees with completely different branches and twigs.  
 
+Global-Inspector can run in browser or from terminal command line.  
+**required input**   
+- Global name: with or without leading caret   
+- Maximal number of subscripts you want to see  
+- Showing content of the displayed Global node   
+- Starting Subscript. Can be exact or before first node shown     
+- Stopping Subscript. Can be exact or before last node shown   
+Subscripts require exact quoting. E.g. "JOURNAL" not JOURNAL    
+ 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
 
