@@ -11,7 +11,7 @@ go
  if '$data(@gl) write !,"Global "_gl_ " does not exist",! quit
  set max=+max
  set max=+max
- set sh=$extract(+sh_1)
+ set sh=$select(sh="":1,1:+sh)
  set (nx,gx)=gl	
  if $length(start) {
   ;	if +start'=start set start =$char(34)_start_$char(34)
