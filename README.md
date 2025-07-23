@@ -15,7 +15,8 @@ Global-Inspector can run in browser or from terminal command line.
 - Maximal number of subscripts you want to see  
 - Showing content of the displayed Global node   
 - Starting Subscript. Can be exact or before first node shown     
-- Stopping Subscript. Can be exact or before last node shown   
+- Stopping Subscript. Can be exact or before last node shown
+      
 Subscripts require exact quoting. E.g. "JOURNAL" not JOURNAL    
  
 ## Prerequisites
