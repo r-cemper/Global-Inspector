@@ -1,5 +1,5 @@
 # Global-Inspector
-If you are investigating complex structured Globals this can become  
+If you are investigating complex structured Globals this can become     
 a rather boring typing exercise. Different from Global Explorer in   
 System Management Portal Global-Inspector allows a kind of drill-down   
 to dig deeper and deeper by subscript levels.  
