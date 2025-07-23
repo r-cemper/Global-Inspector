@@ -12,7 +12,7 @@ Global-Inspector can run in browser or from terminal command line.
 
 **required input**   
 - Global name: with or without leading caret   
-- Maximal number of subscripts you want to see  
+- Maximum number of subscripts you want to see  
 - Showing content of the displayed Global node   
 - Starting Subscript. Can be exact or before first node shown     
 - Stopping Subscript. Can be exact or before last node shown
@@ -34,7 +34,7 @@ docker compose up -d && docker compose logs -f
 ## How to Test it   
 [http://localhost:42773/csp/user/ginspect.CSP](http://localhost:42773/csp/user/ginspect.CSP)
 
-<img width="468" height="450" alt="image" src="https://github.com/user-attachments/assets/657b2e7e-c621-41a6-89bb-10be664ab22f" />  
+<img width="468" height="450" alt="image" src="https://github.com/r-cemper/Global-Inspector/blob/main/browser.jpg" />  
 
 ### from Terminal Prompt 
 To open IRIS Terminal do:
